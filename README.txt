@@ -31,3 +31,4 @@ The game should display a history of moves (chosen columns) for each player belo
 If the entire board gets filled up without any player connecting 4 pieces, the game is a draw.
 After the game ends, players should be prompted if they want to play again.
 
+**THE a.txt and b.txt files are used for the demo of the reload option
