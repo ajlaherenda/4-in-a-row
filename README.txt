@@ -1,3 +1,5 @@
+Development of Connect 4 / 4 in a row game in Ruby as part of the IT 305 Programming Languages course, with properties and functionalities that can be found in the README.txt
+
 **HOW TO RUN THE PROJECT**
 -for macOS users: create a terminal window at the folder of the project 
             in the aforementioned terminal type => ruby letsplay.rb
