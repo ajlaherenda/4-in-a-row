@@ -1,3 +1,16 @@
+**HOW TO RUN THE PROJECT**
+-for macOS users: create a terminal window at the folder of the project 
+            in the aforementioned terminal type => ruby letsplay.rb
+-for Windows users: //add it
+
+**TEAM MEMBERS**
+-Delic Faris
+-Egho Fadi
+-Herenda Ajla
+
+
+**TASK**
+
 Your implementation should draw the game board on the screen, in a console/terminal window. 
 i.e. you do not need to make a graphical UI for it; console-based inputs and outputs are enough.
 You should find a way to represent the entire board, including the player pieces. You can use special unicode symbols for fields, such as ◯, ⬤ for different states of the board.
@@ -31,4 +44,7 @@ The game should display a history of moves (chosen columns) for each player belo
 If the entire board gets filled up without any player connecting 4 pieces, the game is a draw.
 After the game ends, players should be prompted if they want to play again.
 
-**THE a.txt and b.txt files are used for the demo of the reload option
+
+
+**THE a.txt and b.txt files are used for the demo of the reload option**
+
