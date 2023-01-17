@@ -313,12 +313,20 @@ class Board
     end)
   end
 
-  def rotate90_without0(board)
-    ncols = board.column_size
-    board.rows.each_index.with_object([]) do |i,a|
+   def rotate90_without0(board)
+    if(board.column_size - board.row_size == 2)
+      ncols = board.column_size
+      board.rows.each_index.with_object([]) do |i,a|
+      a << (ncols - 2).times.map { |j| board.rows[j][ncols - 1 - i] }
+      end
+    else
+      ncols = board.column_size
+      board.rows.each_index.with_object([]) do |i,a|
       a << (ncols - 1).times.map { |j| board.rows[j][ncols - 1 - i] }
+      end
     end
   end
+
   def rotate90_with0(board)
     ncols = board.row_size
     board.rows.each_index.with_object([]) do |i,a|
