@@ -155,9 +155,9 @@ class RBoard
 
   #we check weather we have 4 in row horizontally, vertically and diagonally
   def game_won(rboard, column_chosen)
-    print downward_diagonals(rotate90_with0(rboard))
-    puts
-    print downward_diagonals(rotate90_without0(rboard))
+    #print downward_diagonals(rotate90_with0(rboard))
+    #puts
+    #print downward_diagonals(rotate90_without0(rboard))
     return check_downward_diagonals(rboard) || rboard.check_rows(rboard) || check_columns(rboard, column_chosen) || check_upward_diagonals(rboard)
    end
 
