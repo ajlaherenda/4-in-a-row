@@ -231,11 +231,20 @@ class RBoard
   end
 
   def rotate90_without0(rboard)
-    ncols = rboard.column_size
-    rboard.rows.each_index.with_object([]) do |i,a|
+    
+    if( rboard.column_size - rboard.row_size == 2)
+      ncols = board.column_size
+      board.rows.each_index.with_object([]) do |i,a|
+      a << (ncols - 2).times.map { |j| board.rows[j][ncols - 1 - i] }
+      end
+    else
+      ncols = rboard.column_size
+      rboard.rows.each_index.with_object([]) do |i,a|
       a << (ncols - 1).times.map { |j| rboard.rows[j][ncols - 1 - i] }
+      end
     end
   end
+
   def rotate90_with0(rboard)
     ncols = rboard.row_size
     rboard.rows.each_index.with_object([]) do |i,a|
