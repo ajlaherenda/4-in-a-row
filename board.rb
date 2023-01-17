@@ -250,6 +250,7 @@ class Board
   end
 
   def check_columns(board, column_chosen)
+      won = true
       wonC = Array.new
       wonR = Array.new
       board.rows.reverse.each_with_index {|col, idx|
@@ -259,13 +260,19 @@ class Board
       }
       (0..row_size.to_i - 1).each do |idx|
         won = wonC[idx..(idx + 3)].all? || wonR[idx..(idx + 3)].all?
-        if won
-          return true
-        else 
-
-          return false
+        if won 
+          break
+        else
+          #nista
         end
       end
+      if won
+        return true
+      else 
+
+        return false
+      end
+      
   end
 
   def return_stored_moves()
