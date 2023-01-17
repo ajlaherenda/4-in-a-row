@@ -171,7 +171,8 @@ class RBoard
     false
   end
 
-  def check_columns(rboard, column_chosen)
+ def check_columns(rboard, column_chosen)
+      won = true
       wonC = Array.new
       wonR = Array.new
       rboard.rows.reverse.each_with_index {|col, idx|
@@ -182,9 +183,18 @@ class RBoard
  
       (0..row_size.to_i - 2).each do |idx|
         won = wonC[idx..(idx + 3)].all? || wonR[idx..(idx + 3)].all?
-        return true if won
+        if won 
+          break
+        else
+          #nista
+        end
       end
-     false
+      if won
+        return true
+      else 
+
+        return false
+      end
   end
 
   def write_loaded(rboard)
